@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManagerEGame : MonoBehaviour
+public class TestGameManager: MonoBehaviour
 {
     [SerializeField, Tooltip("カード")]
-    GameObject _cardPrefab;
+    TestCardcontroller _cardPrefab;
     [SerializeField, Tooltip("Playerの手札の位置")]
     Transform _playerHandTransform;
     
@@ -20,7 +20,8 @@ public class GameManagerEGame : MonoBehaviour
     /// <param name="hand"></param>
     void CreateCard(Transform hand)
     {
-        Instantiate(_cardPrefab, _playerHandTransform, false);
+        TestCardcontroller card = Instantiate(_cardPrefab, hand, false);
+        card.Init(1);
     }
     
    

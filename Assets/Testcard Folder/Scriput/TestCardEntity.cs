@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="ECardEntity",menuName ="Create ECardEntity")]
+[CreateAssetMenu(fileName ="TestCardEntity",menuName ="Create TestCardEntity")]
 //カードデータそのもの
-public class ECardEntity : ScriptableObject
+public class TestCardEntity : ScriptableObject
 {
     public new string name;
     public int hp;
-    public int st;
+    public int at;
     public int cost;
     public Sprite icon;
 }
